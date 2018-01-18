@@ -1,0 +1,31 @@
+<div class="col-md-12 col-xs-12 header" ng-controller="HeaderController as hc">
+  <div class="col-md-12 col-xs-12">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center title">
+      <img src="images/AngularJS_logo.png" alt="logo">
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="col-md-12 col-xs-12">
+    <div class="col-md-4 col-xs-2 no-padding">
+
+    </div>
+    <div class="col-md-4 col-xs-8 text-center padding-top no-padding spacing">
+      <span>USERS TEST</span>
+    </div>
+
+    <div class="col-md-4 col-xs-2 text-right no-padding header_circleContainer">
+      <div ng-if="hc.isLogged != true && hc.isLogged != 'true'" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">&nbsp;</div>
+      <button ng-if="hc.isLogged == true || hc.isLogged == 'true'" ng-class="{'circle-active' : hc.currentUser == 1, 'circle-no-active' : hc.currentUser == 0, 'circle-wait' : hc.currentUser == 2}"
+        class="circle circle-text dropdown-toggle pull-right" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        {{ hc.getInitials(hc.name) }}
+      </button>
+      <div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuLink">
+        <button class="dropdown-item" ng-click="hc.logout();">Cerrar sesión</button>
+      </div>
+    </div>
+
+  </div>
+</div>

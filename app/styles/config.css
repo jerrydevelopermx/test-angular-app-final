@@ -1,0 +1,21 @@
+.configs{
+    height: 60vh
+}
+.configs-title{
+    min-height: 73px;
+    border-radius: 10px 10px 0 0;
+    background-color: #eaeef0;
+    display: flex;
+    align-items: center;
+}
+.configs-title > label {
+    font-size: 24px;
+}
+.config-item{
+    height: 40px;
+    display: flex;
+    align-items: center;;
+}
+div.configs > div:nth-of-type(even) {
+    background-color: #e5e5e55e;
+}

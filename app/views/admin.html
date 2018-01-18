@@ -1,0 +1,55 @@
+<div>
+  <div class="row">
+    <div class="col-md-12 col-xs-12">&nbsp;</div>
+    <div class="col-md-12 hidden-xs">&nbsp;</div>
+    <div class="col-md-12 col-xs-12">
+      <div class="col-md-1 hidden-xs">&nbsp;</div>
+      <div class="col-md-10 col-xs-12 box-shadow no-padding">
+        <div class="col-md-12 header-agents no-padding">
+          <div class="col-md-1 hidden-xs header-agents-text">&nbsp;</div>
+          <div class="right-inner-addon col-md-5 col-xs-10 header-agents-text">
+            <i class="glyphicon glyphicon-search"></i>
+            <input class="no-margin-bottom input-search" ng-model="searchAgent" placeholder="USERS"></input>
+          </div>
+          <div class="col-md-1 hidden-xs no-padding header-agents-text">
+            <label class="col-md-12 text-center no-padding no-margin-bottom">EMAIL</label>
+          </div>
+          <div class="col-md-4 hidden-xs header-agents-text no-padding">
+            <label class="col-md-12 text-center no-padding no-margin-bottom">PHONE</label>
+          </div>
+          <div id="addUser" class="col-md-1 col-xs-1 header-agents-text">
+            <span ng-click="ac.addUser();" class="col-md-12 text-center glyphicon glyphicon-plus no-padding"></span>
+          </div>
+        </div>
+        <div class="col-md-12 col-xs-12 content-agents no-padding">
+          <div class="col-md-12 col-xs-12 borders" ng-if="user.userId != ac.currentUser" ng-repeat="(key, user) in ac.resources | orderBy:'name':ac.reverse | orderBy:ac.property:ac.reverse | filter:searchAgent track by $index">
+            <div class="col-md-1 col-xs-3 no-padding-right-md">
+              <label class="circle circle-text circle-active">
+                {{ac.getInitials(user.name +' '+ user.lastName)}}</label>
+            </div>
+            <div class="col-md-4 col-xs-9 content-agents-text">
+              <label class="col-xs-12 ellipsis no-padding" data-toggle="tooltip" title="{{user.name}}">{{user.name +' '+ user.lastName}}</label>
+            </div>
+            <div class="col-md-3 hidden-xs content-agents-text text-center no-padding">
+              <label>{{user.email}}</label>
+            </div>
+            <div class="col-md-3 col-xs-8 content-agents-text text-center padding-left">
+              <label>{{user.phone}}</label>
+            </div>
+            <div class="col-md-1 col-xs-2 content-agents-text no-padding text-center">
+              <div class="col-md-12 dropdown-menu-option glyphicon glyphicon-collapse-down" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"></div>
+              <div class="dropdown-menu dropdown-menu-icons">
+                <span data-toggle="tooltip" title="Delete user" ng-class="{'hiddenElement' : ac.currentUser == user.email, }" ng-click="ac.deleteUser(user.email, user)"
+                  class="col-md-6 col-xs-12 text-center glyphicon glyphicon-trash icon"></span>
+                <span data-toggle="tooltip" title="Edit user" ng-click="ac.editUser(user, $index)" class="col-md-6 col-xs-12 text-center glyphicon glyphicon-pencil icon"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-1 hidden-xs">&nbsp;</div>
+    </div>
+    <div class="col-md-12 hidden-xs">&nbsp;</div>
+  </div>

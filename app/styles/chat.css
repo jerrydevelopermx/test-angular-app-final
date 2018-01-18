@@ -1,0 +1,147 @@
+
+.chat_container{
+    height: 60vh;
+    vertical-align: bottom;
+    display: table-cell;
+    overflow: scroll;
+    padding-top: 10px;
+}
+
+.chat_container_messages{
+    height: 100%;
+}
+
+.chat_box{
+    padding: 5px 5px 5px 5px;
+}
+.chat_sender{
+    min-height: 60px;
+    border-radius: 15px;
+    border: 1px solid #f6f3f3;
+    background-color: #f6f3f3;
+}
+
+.chat_sender .chat_time{
+    bottom: 0px;
+    font-size: 14px;
+    color: #cbc2c2;
+}
+.chat_sender .chat_circle{
+    margin-left: -15px;
+}
+
+.chat_receiver{
+    min-height: 60px;
+    border-radius: 15px;
+    background-color: #ddf8c6;
+    border: 1px solid #ddf8c6;
+}
+ .message{
+    text-align: justify;
+    padding: 10px 0px;
+}
+.chat_receiver .chat_time{
+    bottom: 0px;
+    font-size: 14px;
+    color: #cbc2c2;
+}
+.chat_receiver .chat_circle{
+    margin-left: 22px;
+}
+
+.chat_circle{
+    background-color: #01c1de;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.92;
+    letter-spacing: normal;
+    color: #ffffff;
+    align-items: center;
+    padding: 19px 0 0 17px;
+    text-shadow: 1.5px 1.5px 4px #0000006b;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+.bot_active{
+    color: #69be69;
+} 
+.bot_inactive{
+    color: #f06a56;
+} 
+
+.chat_input_container{
+    height: 50px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    background-color: #e6e6e6;
+}
+
+.chat_input{
+    height: 40px;
+    width: 100%;
+    border-radius: 12px;
+    border: 0px solid;
+    padding: 0px 10px 0px 10px;
+}
+
+.chat_input::-webkit-input-placeholder{
+    color: #ABA7A7;
+}
+
+.chat_input::-moz-placeholder{
+    color: #ABA7A7;
+}
+
+.chat_input:-moz-placeholder{
+    color: #ABA7A7;
+}
+
+.chat_sender_button{
+    color: #676464;
+    font-size: 28px;
+}
+
+.chat_sender_button:hover{
+    color:#1C8F1C;
+    transform: scale(1) rotateZ(45deg);
+    -moz-transform: scale(1) rotateZ(45deg);
+    -webkit-transform: scale(1) rotateZ(45deg);
+    -o-transform: scale(1) rotateZ(45deg);
+}
+.green{
+    background-color:#86df95;
+}
+.chat_menu{
+    font-size: 25px;
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+.chat_triangle_right{
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 40px solid transparent;
+    position: relative;
+    border-left: 40px solid #ddf8c6;
+    left: 40px;
+    top: -1px;
+}
+
+.chat_triangle_left{
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-right: 40px solid #f6f3f3;
+    top: -1px;
+    right: 30px;
+    position: relative;
+}
